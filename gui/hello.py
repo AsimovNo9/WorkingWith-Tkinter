@@ -6,4 +6,4 @@ root = Tk()
 myLabel = Label(root, text="Hello World")  # Creating a label widget
 myLabel.pack()  # Placing the label unto the screen
 
-root.mainloop()
+root.mainloop()  # Running the main loop acts like a refresh in the window
