@@ -1,12 +1,16 @@
 # Working With Tkinter: Self Learning For Some Random Project
 
-Hello, nothing much to see here, just followng some online tutorials, going through documentation and creating sort of like a course outline through working with tkinter. It gets Updated as work gets done. Find the related python scripts in the gui folder.
+Hello, nothing much to see here, just followng some online tutorials, going through documentation and creating sort of like a course outline through working with tkinter. It gets Updated as work gets done. Find the related tutorial python scripts in the gui folder, and projects in the project folder.
 
 ## Course Outline
+The outline includes turorials and projects. Projects help sum up everything learnt in the past couple tutorials, quite useful. Projects are appended with a <span style="color:FF06B7">(P)</span>
+
 1. Labels - hello.py
 2. Grids - grid.py
 3. Buttons - buttons.py
 4. Enteries - entry.py
+5. Calculator - calculator.py <span style="color:FF06B7">(P)</span>
+
 
 
 ### Labels
@@ -34,3 +38,8 @@ Working with enteries (inputs). Editing the button.py script to add input from t
 <th><img src= "./images/entry_2.png" alt="entry with user name typed image window"></th>
 </tr>
 </table>
+
+### Calculator <span style="color:FF06B7">(P)</span>
+Using all that has been learnt previously to build a calculator in a window. it should follow a standard calculator layout as shown, and shouldn't be too complicated
+
+<img src="./images/calculator.png" alt="Calculator GUI">
