@@ -1,11 +1,12 @@
 # Working With Tkinter: Self Learning For Some Random Project
 
-Hello, nothing much to see here, just followng some online tutorials, going through odcumentationa and creating sort of like a course outline through working with tkinter. It gets Updated as work gets done.
+Hello, nothing much to see here, just followng some online tutorials, going through documentation and creating sort of like a course outline through working with tkinter. It gets Updated as work gets done. Find the related python scripts in the gui folder.
 
 ## Course Outline
 1. Labels - hello.py
-1. Grids - grid.py
-1. Buttons - buttons.py
+2. Grids - grid.py
+3. Buttons - buttons.py
+4. Enteries - entry.py
 
 
 ### Labels
@@ -23,3 +24,11 @@ Working with grids. Grids basically account for the placement of objects in the 
 Working with buttons. Making buttons that access a callback function (I love the word callback functions, thinking ROS with subscribers). The window places a green button with black text that repeatedly prints in the window that the button has been clicked
 
 <img src= "./images/buttons.png" alt="buttons image window">
+
+### Enteries
+Working with enteries (inputs). Editing the button.py script to add input from the user, so whatever the user types into the entry form is printed in the window.
+
+<table>
+<tr><img src= "./images/entry_1.png" alt="default entry image window"></tr>
+<tr><img src= "./images/entry_2.png" alt="entry with user name typed image window"></tr>
+</table>
