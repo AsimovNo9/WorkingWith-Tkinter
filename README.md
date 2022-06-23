@@ -3,8 +3,8 @@
 Hello, nothing much to see here, just followng some online tutorials, going through odcumentationa and creating sort of like a course outline through working with tkinter. It gets Updated as work gets done.
 
 ## Course Outline
-1. Labels - Hello.py
-1. Grids - Grid.py
+1. Labels - hello.py
+1. Grids - grid.py
 1. Buttons - buttons.py
 
 
