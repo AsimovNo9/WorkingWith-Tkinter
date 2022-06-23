@@ -29,6 +29,8 @@ Working with buttons. Making buttons that access a callback function (I love the
 Working with enteries (inputs). Editing the button.py script to add input from the user, so whatever the user types into the entry form is printed in the window.
 
 <table>
-<tr><img src= "./images/entry_1.png" alt="default entry image window"></tr>
-<tr><img src= "./images/entry_2.png" alt="entry with user name typed image window"></tr>
+<tr>
+<th><img src= "./images/entry_1.png" alt="default entry image window"></th>
+<th><img src= "./images/entry_2.png" alt="entry with user name typed image window"></th>
+</tr>
 </table>
