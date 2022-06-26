@@ -9,8 +9,26 @@ input_1.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 # Making buttons
 def button_clbks(number):
+    current_number = str(input_1.get())
     input_1.delete(0, END)
-    input_1.insert(0, number)
+    input_1.insert(0, current_number + str(number))
+
+
+def clear_clbk():
+    input_1.delete(0, END)
+
+
+def add_clbk():
+    starting_num = input_1.get()
+    global s_num
+    s_num = int(starting_num)
+    input_1.delete(0, END)
+
+
+def equal_clbk():
+    next_num = input_1.get()
+    input_1.delete(0, END)
+    input_1.insert(0, s_num + int(next_num))
 
 
 def create_buttons():
@@ -45,16 +63,16 @@ def create_buttons():
         root, text="0", padx=50, pady=20, command=lambda: button_clbks(0)
     )
 
-    button_add = Button(root, text="+", padx=50, pady=20, command=button_clbks).grid(
+    button_add = Button(root, text="+", padx=50, pady=20, command=add_clbk).grid(
         row=5, column=0
     )
 
-    button_equals = Button(root, text="=", padx=91, pady=20, command=button_clbks).grid(
+    button_equals = Button(root, text="=", padx=91, pady=20, command=equal_clbk).grid(
         row=5, column=1, columnspan=2
     )
 
     button_clear = Button(
-        root, text="Clear", padx=91, pady=20, command=button_clbks
+        root, text="Clear", padx=91, pady=20, command=clear_clbk
     ).grid(row=4, column=1, columnspan=3)
     button_zero.grid(row=4, column=0)
     button_one.grid(row=3, column=0)
