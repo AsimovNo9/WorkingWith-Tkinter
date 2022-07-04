@@ -2,6 +2,8 @@ from tkinter import *
 
 root = Tk()
 root.title("Calculator")
+state = "None"
+
 
 # Create calc. display
 input_1 = Entry(root, width=35, borderwidth=5)
@@ -19,8 +21,37 @@ def clear_clbk():
 
 
 def add_clbk():
-    starting_num = input_1.get()
     global s_num
+    global state
+    starting_num = input_1.get()
+    state = "add"
+    s_num = int(starting_num)
+    input_1.delete(0, END)
+
+
+def sub_clbk():
+    global s_num
+    global state
+    starting_num = input_1.get()
+    state = "sub"
+    s_num = int(starting_num)
+    input_1.delete(0, END)
+
+
+def mul_clbk():
+    global s_num
+    global state
+    starting_num = input_1.get()
+    state = "mul"
+    s_num = int(starting_num)
+    input_1.delete(0, END)
+
+
+def div_clbk():
+    global s_num
+    global state
+    starting_num = input_1.get()
+    state = "div"
     s_num = int(starting_num)
     input_1.delete(0, END)
 
@@ -28,7 +59,25 @@ def add_clbk():
 def equal_clbk():
     next_num = input_1.get()
     input_1.delete(0, END)
-    input_1.insert(0, s_num + int(next_num))
+
+    # Tried to create a state with a dictionary but there's some python specifics I am missing
+
+    # state_machine = {
+    #     "add": lambda: input_1.insert(0, int(s_num) + int(next_num)),
+    #     "sub": lambda: input_1.insert(0, int(s_num) - int(next_num)),
+    #     "mul": lambda: input_1.insert(0, int(s_num) * int(next_num)),
+    #     "div": lambda: input_1.insert(0, int(s_num) / int(next_num)),
+    # }
+    # state_machine[state]
+
+    if state == "add":
+        input_1.insert(0, int(s_num) + int(next_num))
+    if state == "sub":
+        input_1.insert(0, int(s_num) - int(next_num))
+    if state == "mul":
+        input_1.insert(0, int(s_num) * int(next_num))
+    if state == "div":
+        input_1.insert(0, int(s_num) / int(next_num))
 
 
 def create_buttons():
@@ -63,17 +112,18 @@ def create_buttons():
         root, text="0", padx=50, pady=20, command=lambda: button_clbks(0)
     )
 
-    button_add = Button(root, text="+", padx=50, pady=20, command=add_clbk).grid(
-        row=5, column=0
-    )
+    button_add = Button(root, text="+", padx=50, pady=20, command=add_clbk)
 
-    button_equals = Button(root, text="=", padx=91, pady=20, command=equal_clbk).grid(
-        row=5, column=1, columnspan=2
-    )
+    button_equals = Button(root, text="=", padx=91, pady=20, command=equal_clbk)
 
-    button_clear = Button(
-        root, text="Clear", padx=91, pady=20, command=clear_clbk
-    ).grid(row=4, column=1, columnspan=3)
+    button_clear = Button(root, text="Clear", padx=91, pady=20, command=clear_clbk)
+
+    button_subtract = Button(root, text="-", padx=51.5, pady=20, command=sub_clbk)
+
+    button_multiply = Button(root, text="x", padx=50, pady=20, command=mul_clbk)
+
+    button_divide = Button(root, text="/", padx=50, pady=20, command=div_clbk)
+
     button_zero.grid(row=4, column=0)
     button_one.grid(row=3, column=0)
     button_two.grid(row=3, column=1)
@@ -84,6 +134,12 @@ def create_buttons():
     button_seven.grid(row=1, column=0)
     button_eight.grid(row=1, column=1)
     button_nine.grid(row=1, column=2)
+    button_subtract.grid(row=6, column=0)
+    button_multiply.grid(row=6, column=1)
+    button_divide.grid(row=6, column=2)
+    button_add.grid(row=5, column=0)
+    button_clear.grid(row=4, column=1, columnspan=3)
+    button_equals.grid(row=5, column=1, columnspan=2)
 
 
 if __name__ == "__main__":
